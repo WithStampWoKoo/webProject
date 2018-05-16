@@ -11,8 +11,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class IndexController {
 
     @RequestMapping("/index")
-    @ResponseBody
     public String index(){
-        return "welcome to webproject";
+        return "index";
+    }
+
+
+    @RequestMapping("/bootstrap")
+    public String bootstrap(){
+        return "bootstrap";
     }
 }
