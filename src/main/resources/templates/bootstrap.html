@@ -1,156 +1,236 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-  <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title></title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-  <!--[if lt IE 9]>
-  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <style type="text/css">
-    body {
-      position: relative;
-      padding-top: 70px;
-    }
-  </style>
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        body {
+            /*position: relative;*/
+            padding-top: 70px;
+        }
+
+        .scrollspy-example {
+            position: relative;
+            /*height: 200px;*/
+            margin-top: 10px;
+            overflow: auto;
+        }
+    </style>
 </head>
 <body>
-<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-div" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+<div>
+    <nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-div"
+                        aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar-div">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#index">首页 <!--<span class="sr-only">(current)</span>--></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">案例 <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#case">智能机器人</a></li>
-            <li><a href="#case">消费电子</a></li>
-            <li><a href="#case">医疗</a></li>
-            <!--<li role="separator" class="divider"></li>-->
-            <!--<li><a href="#">Separated link</a></li>-->
-            <!--<li role="separator" class="divider"></li>-->
-            <li><a href="#case">机械设备</a></li>
-            <li><a href="#case">小家电</a></li>
-          </ul>
-        </li>
-        <li><a href="#">服务</a></li>
-        <li><a href="#aboutUs">关于我们</a></li>
-        <li><a href="#contactInfo">联系方式</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <p class="navbar-text"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> 13126596916</p>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<div data-spy="scroll" data-target="#navbar" data-offset="0" class="container-fluid">
-  <div id="index">
-    <div class="row">
-      <div class="col-md-12"><p>这里是简介</div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-div">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#index" aria-haspopup="true"
+                                          aria-expanded="false">首页 <!--<span class="sr-only">(current)</span>--></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">案例 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#robot">智能机器人</a></li>
+                            <li><a href="#electronics">消费电子</a></li>
+                            <li><a href="#medical">医疗</a></li>
+                            <!--<li role="separator" class="divider"></li>-->
+                            <!--<li><a href="#">Separated link</a></li>-->
+                            <!--<li role="separator" class="divider"></li>-->
+                            <li><a href="#marchanical">机械设备</a></li>
+                            <li><a href="#appliances">小家电</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">服务</a></li>
+                    <li><a href="#aboutUs" aria-haspopup="true"
+                           aria-expanded="false">关于我们</a></li>
+                    <li><a href="#contactInfo">联系方式</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <p class="navbar-text"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                        13126596916</p>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div data-offset="0" class="container-fluid scrollspy-example">
+        <div id="index">
+            <div class="row">
+                <div class="col-md-12"><p>这里是简介</div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"><img src="image.jpg"></div>
+                <div class="col-md-3"><img src="image.jpg"></div>
+                <div class="col-md-3"><img src="image.jpg"></div>
+                <div class="col-md-3"><img src="image.jpg"></div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 id="case" class="text-center">案例</h2>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#robot">点击我进行展开，智能机器人</a>
+                        </h4>
+                    </div>
+                    <div id="robot" class="panel-collapse collapse in">
+                        <div class="panel-body">这里是智能机器人</div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#electronics">
+                                点击我进行展开，消费电子
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="electronics" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            这里是消费电子
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#medical">
+                                点击我进行展开，医疗
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="medical" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            这里是医疗
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#marchanical">
+                                点击我进行展开，机械设备
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="marchanical" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            这里是机械设备
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#appliances">
+                                点击我进行展开，小家电
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="appliances" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            这里是小家电
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div>
+            <h2 id="aboutUs" class="text-center">关于我们</h2>
+            <div class="row">
+                <div class="col-md-12">这里是关于我们</div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 id="contactInfo" class="text-center">联系方式</h2>
+            <div class="row">
+                <div class="col-md-6">这里是联系方式</div>
+                <div class="col-md-6">
+                    <iframe src="map.html" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-md-3"><img src="image.jpg"></div>
-      <div class="col-md-3"><img src="image.jpg"></div>
-      <div class="col-md-3"><img src="image.jpg"></div>
-      <div class="col-md-3"><img src="image.jpg"></div>
-    </div>
-  </div>
-  <hr>
-  <div>
-    <h2 id="case" class="text-center">案例</h2>
-    <ul class="">
-      <li><a id="#robot">智能机器人</a></li>
-      <li><a id="#electronics">消费电子</a></li>
-      <li><a id="#medical">医疗</a></li>
-      <li><a id="#marchanical">机械设备</a></li>
-      <li><a id="appliances">小家电</a></li>
-    </ul>
-  </div>
-  <hr>
-  <div>
-    <h2 id="aboutUs" class="text-center">关于我们</h2>
-    <div class="row">
-      <div class="col-md-1">这里是关于我们</div>
-    </div>
-  </div>
-  <hr>
-  <div>
-    <h2 id="contactInfo" class="text-center">联系方式</h2>
-    <div class="row">
-      <div class="col-md-6">这里是联系方式</div>
-      <div class="col-md-6">
-        <iframe src="map.html" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </div>
-  </div>
 </div>
 
 <!--<div class="bs-example" data-example-id="embedded-scrollspy">-->
-  <!--<nav id="navbar-example2" class="navbar navbar-default navbar-static">-->
-    <!--<div class="container-fluid">-->
-      <!--<div class="navbar-header">-->
-        <!--<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">-->
-          <!--<span class="sr-only">Toggle navigation</span>-->
-          <!--<span class="icon-bar"></span>-->
-          <!--<span class="icon-bar"></span>-->
-          <!--<span class="icon-bar"></span>-->
-        <!--</button>-->
-        <!--<a class="navbar-brand" href="#">Project Name</a>-->
-      <!--</div>-->
-      <!--<div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">-->
-        <!--<ul class="nav navbar-nav">-->
-          <!--<li class=""><a href="#fat">@fat</a></li>-->
-          <!--<li class="active"><a href="#mdo">@mdo</a></li>-->
-          <!--<li class="dropdown">-->
-            <!--<a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-            <!--<ul class="dropdown-menu" aria-labelledby="navbarDrop1">-->
-              <!--<li><a href="#one">one</a></li>-->
-              <!--<li><a href="#two">two</a></li>-->
-              <!--<li role="separator" class="divider"></li>-->
-              <!--<li><a href="#three">three</a></li>-->
-            <!--</ul>-->
-          <!--</li>-->
-        <!--</ul>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</nav>-->
-  <!--<div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example">-->
-    <!--<h4 id="fat">@fat</h4>-->
-    <!--<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>-->
-    <!--<h4 id="mdo">@mdo</h4>-->
-    <!--<p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>-->
-    <!--<h4 id="one">one</h4>-->
-    <!--<p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.</p>-->
-    <!--<h4 id="two">two</h4>-->
-    <!--<p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.</p>-->
-    <!--<h4 id="three">three</h4>-->
-    <!--<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>-->
-    <!--<p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats.-->
-    <!--</p>-->
-  <!--</div>-->
+<!--<nav id="navbar-example2" class="navbar navbar-default navbar-static">-->
+<!--<div class="container-fluid">-->
+<!--<div class="navbar-header">-->
+<!--<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">-->
+<!--<span class="sr-only">Toggle navigation</span>-->
+<!--<span class="icon-bar"></span>-->
+<!--<span class="icon-bar"></span>-->
+<!--<span class="icon-bar"></span>-->
+<!--</button>-->
+<!--<a class="navbar-brand" href="#">Project Name</a>-->
 <!--</div>-->
-
+<!--<div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">-->
+<!--<ul class="nav navbar-nav">-->
+<!--<li class=""><a href="#fat">@fat</a></li>-->
+<!--<li class="active"><a href="#mdo">@mdo</a></li>-->
+<!--<li class="dropdown">-->
+<!--<a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+<!--<ul class="dropdown-menu" aria-labelledby="navbarDrop1">-->
+<!--<li><a href="#one">one</a></li>-->
+<!--<li><a href="#two">two</a></li>-->
+<!--<li role="separator" class="divider"></li>-->
+<!--<li><a href="#three">three</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--</nav>-->
+<!--<div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example">-->
+<!--<h4 id="fat">@fat</h4>-->
+<!--<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>-->
+<!--<h4 id="mdo">@mdo</h4>-->
+<!--<p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>-->
+<!--<h4 id="one">one</h4>-->
+<!--<p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.</p>-->
+<!--<h4 id="two">two</h4>-->
+<!--<p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.</p>-->
+<!--<h4 id="three">three</h4>-->
+<!--<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>-->
+<!--<p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats.-->
+<!--</p>-->
+<!--</div>-->
+<!--</div>-->
 
 
 <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
@@ -158,8 +238,15 @@
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-    });
+    $('#case-tabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    $('#navbar-div a').click(function (e) {
+        $(this).parent().addClass('active').siblings().removeClass('active');
+    })
+
+
 </script>
 </body>
 </html>
